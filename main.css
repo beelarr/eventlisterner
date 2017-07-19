@@ -1,0 +1,27 @@
+pre {
+    color: #99AAA0;
+}
+
+.accent {
+    color: lightseagreen;
+}
+
+.bordered {
+    border: 6px dotted rebeccapurple;
+    border-radius: 20px;
+
+}
+
+.flashy {
+    color: lightslategray;
+
+}
+
+.moreforce {
+    font-size: 2em;
+    text-transform: uppercase;
+
+}
+
+
+
