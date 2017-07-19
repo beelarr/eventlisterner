@@ -94,12 +94,41 @@ let quotesArray = [
 ];
 
 
+quotesArray.forEach((quote, index)=>{
+    let quote_block = `<div id='quote--${index}'>
+                        <h3>"${quote}" -Star Wars</h3>
+                        </div>`
+
+    let quote_div = document.createElement('div');
+    quote_div.innerHTML = quote_block;
+    document.querySelector('#stick-it-here').appendChild(quote_div);
+    let quote_dom = document.querySelector(`#quote--${index}`);
+    quote_dom.addEventListener('click', (e) => {
+        console.log('e');
+        e.currentTarget.classList.add('accent');
+
+    })
+
+});
 
 
+let jedi_player = [22, 24, 980, 200];
+let storm_player = [11, 14, 900, 190];
 
 
+function change_scores(item, index, array){
+  array[index] = item * 10;
+}
 
+document.querySelector('#change-jedi')
+    .addEventListener('click', () => {
+    jedi_player.forEach(change_scores);
+})
 
+document.querySelector('#change-storm')
+    .addEventListener('click', ()=>{
+    storm_player.forEach(change_scores);
+    });
 
 
 
